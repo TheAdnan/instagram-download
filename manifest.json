@@ -13,7 +13,7 @@
   "permissions": [
     "activeTab",
     "tabs",
-    "webRequest"
+    "downloads"
   ],
 
   "browser_action": {
