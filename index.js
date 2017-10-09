@@ -8,11 +8,11 @@ browser.browserAction.onClicked.addListener(function(tab){
 });
 
 function onStartedDownload(id) {
-  console.log("Downloading...");
+  return "Downloading....";
 }
 
 function onFailed(error) {
-  console.log("Download failed");
+  return "Download Failed";
 }
 
 function onExecuted(result) {
@@ -25,7 +25,7 @@ function onExecuted(result) {
 }
 
 function onError(error) {
-  console.log("Cant open downloader.js");
+  return "Can't Open Downloader.js";
 }
 
 
