@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+  "name": "insta-download",
+  "version": "1.0",
+
+  "description": "Opens an instagram Video in a new window for download",
+
+  "icons": {
+    "48": "icons/insta-48.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "downloads"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/insta-48.png",
+    "default_title": "Download instagram video"
+  },
+
+  "background":
+    {
+      "scripts": ["index.js"]
+    }
+}
