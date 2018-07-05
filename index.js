@@ -11,11 +11,30 @@ browser.contextMenus.onClicked.addListener((info) => {
         }).then((results) => {
             onExecuted(results);
         }).catch((error) => {
-            console.log(error);
+            return false;
         });
     }
 });
 
+browser.browserAction.onClicked.addListener(function(tab){
+    var executing = browser.tabs.executeScript({
+        file: "downloader-menu.js"
+    });
+    executing.then(onExecutedTab, function () {
+        return false;
+    });
+});
+
+function onExecutedTab(result) {
+    console.log(result);
+    var downloading = browser.downloads.download({
+        url : result[0] + "",
+        saveAs : true
+    });
+    downloading.then(onStartedDownload, function () {
+        return false;
+    });
+}
 
 function onExecuted(result) {
   var downloading = browser.downloads.download({

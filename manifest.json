@@ -16,6 +16,11 @@
     "contextMenus"
   ],
 
+  "browser_action": {
+    "default_icon": "icons/insta-48.png",
+    "default_title": "Download instagram photo"
+  },
+
   "background":
     {
       "scripts": ["index.js"]
